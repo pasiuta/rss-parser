@@ -30,7 +30,6 @@ And you can create,read,update and delete posts and all this work with the datab
                
     }`,
 
-
 4) For get posts you need create GET request to this url (http://localhost:5000/posts/)
    You will get last 20 posts from database
 
