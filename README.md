@@ -22,13 +22,13 @@ And you can create,read,update and delete posts and all this work with the datab
 
 3) For create post you need create POST request to this url(http://localhost:5000/posts/)
 
-   `{
+   {
        "title":"Europe has become a leader in regulating the cryptocurrency industry",      
        "description":"In the crypto world, MiCA will set global standard",       
        "category":"Crypto",
        "author":"JohnDoe"
                
-    },`
+    },
 
 4) For get posts you need create GET request to this url (http://localhost:5000/posts/)
    You will get last 20 posts from database
