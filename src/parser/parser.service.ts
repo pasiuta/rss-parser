@@ -16,7 +16,7 @@ export class ParserService {
     async handleCron() {
         let parser = new Parser();
 
-        const feed = await parser.parseURL('https://www.pravda.com.ua/eng/rss/')
+        const feed = await parser.parseURL(process.env.PARSER_LINK)
         for (const item of feed.items) {
             const parserDto = {
                 title: item.title,

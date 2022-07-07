@@ -24,7 +24,4 @@ export class PostEntity {
     createdAt: Date;
     @UpdateDateColumn()
     updatedAt: Date;
-
-
-
 }

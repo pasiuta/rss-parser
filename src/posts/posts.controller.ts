@@ -13,7 +13,6 @@ export class PostsController {
     }
 
     @Get()
-
     public findAll(@Paginate() query: PaginateQuery): Promise<Paginated<PostEntity>> {
         return this.postService.findAll(query)
     }
@@ -23,7 +22,6 @@ export class PostsController {
     @ApiResponse({status: 200, type: PostEntity, description: 'created post'})
     @UsePipes(ValidationPipe)
     @Post()
-
     createPost(@Body() dto: CreatePostDto) {
         return this.postService.create(dto)
     }
@@ -40,7 +38,6 @@ export class PostsController {
     @ApiParam({name: 'posts', required: true, description: 'posts'})
     @ApiResponse({status: 200, type: [PostEntity], description: 'get all posts'})
     @Get()
-
     getAll() {
         return this.postService.getAllPosts();
     }
@@ -48,7 +45,6 @@ export class PostsController {
     @ApiOperation({summary: 'Get Post'})
     @ApiResponse({status: 200, type: [PostEntity], description: 'get 1 post'})
     @Get('/:id')
-
     getOne(@Param('id') id: number) {
         return this.postService.getPost(id)
     }
@@ -57,7 +53,6 @@ export class PostsController {
     @ApiResponse({status: 200, type: [PostEntity], description: 'updated post'})
     @UsePipes(ValidationPipe)
     @Put('/:id')
-
     update(@Param('id') id: number, @Body() postDto: UpdatePostDto) {
         return this.postService.updatePost(id, postDto);
     }
@@ -65,7 +60,6 @@ export class PostsController {
     @ApiOperation({summary: 'Delete Post'})
     @ApiResponse({status: 200, type: [PostEntity], description: 'deleted post'})
     @Delete('/:id')
-
     remove(@Param('id') id: number) {
         return this.postService.removePost(id);
     }

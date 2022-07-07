@@ -7,7 +7,6 @@ import {ParserModule} from "./parser/parser.module"
 
 @Module({
     imports: [
-
         ConfigModule.forRoot({isGlobal: true, envFilePath: './.env'}),
         TypeOrmModule.forRoot({
             type: 'postgres',
@@ -24,7 +23,6 @@ import {ParserModule} from "./parser/parser.module"
         }),
         PostsModule, ParserModule
     ],
-
 })
 export class AppModule {
 }
